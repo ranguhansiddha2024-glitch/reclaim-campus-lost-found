@@ -4,8 +4,8 @@ import sqlite3
 from pathlib import Path
 
 app = Flask(__name__)
-app.secret_key = "change-this-for-production"
-DB_PATH = Path(__file__).with_name("reclaim.db")
+app.secret_key = os.environ.get("SECRET_KEY", "dev-only-secret")
+DB_PATH = Path(os.environ.get("DB_DIR", str(Path(__file__).parent))) / "reclaim.db"
 
 SCHEMA = """
 PRAGMA foreign_keys = ON;
