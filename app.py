@@ -251,4 +251,4 @@ def mark_returned(item_id):
 if __name__ == "__main__":
     init_db()
     print("RECLAIM is running at http://127.0.0.1:5000")
-    app.run(debug=True)
+    app.run(debug=False)
