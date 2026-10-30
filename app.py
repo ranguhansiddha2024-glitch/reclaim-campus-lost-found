@@ -1,3 +1,4 @@
+import os
 from flask import Flask, request, redirect, url_for, flash, render_template_string
 import sqlite3
 from pathlib import Path
